@@ -151,6 +151,11 @@ export default {
       ],
     },
     {
+      name: 'Compoany List',
+      url: '/company',
+      icon: 'icon-pie-chart',
+    },
+    {
       name: 'Charts',
       url: '/charts',
       icon: 'icon-pie-chart',
