@@ -81,13 +81,6 @@ const Tips = () =>
         <em>Tip: Hold shift when sorting to multi-sort!</em>
     </div>;
 
-const callback = (state, rowInfo, column, instance)=>{
-  
-  return {
-  onClick: (e, handleOriginal) => {
-    console.log('A Td Element was clicked!')
-    console.log(state)}}}
-
 class CompanyList extends React.Component {
 render() {
     return (
@@ -102,7 +95,7 @@ render() {
             return (
             <div style={{ padding: "20px" }}>
                 <ReactTable
-                getProps={callback}
+                
                 data={row.original.employee}
                 columns={employeeColumns}
                 defaultPageSize={3}
