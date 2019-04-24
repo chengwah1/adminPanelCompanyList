@@ -1,8 +1,40 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Badge, Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Register extends Component {
+  constructor() {
+    super();
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.handleChange  = this.handleChange .bind(this);
+    this.state = {
+      username: '',
+      email: '',
+      password:'',
+      confirmpassword:''
+    };
+  }
+
+  onFormSubmit() {
+    alert(JSON.stringify(this.state, null, '  '));
+  }
+  handleChange(e) {
+
+    const name = e.target.name;
+    const value = e.target.value;
+
+      this.setState({
+        [name]:value
+      })
+
+  }
+
   render() {
+    const disabledCondition = 
+      !this.state.email 
+      || !this.state.username 
+      || !this.state.password  
+      || !this.state.confirmpassword
+      || this.state.password!==this.state.confirmpassword;
     return (
       <div className="app flex-row align-items-center">
         <Container>
@@ -10,7 +42,7 @@ class Register extends Component {
             <Col md="9" lg="7" xl="6">
               <Card className="mx-4">
                 <CardBody className="p-4">
-                  <Form>
+                  <Form onSubmit={this.onFormSubmit}>
                     <h1>Register</h1>
                     <p className="text-muted">Create your account</p>
                     <InputGroup className="mb-3">
@@ -19,13 +51,25 @@ class Register extends Component {
                           <i className="icon-user"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Username" autoComplete="username" />
+                      <Input 
+                        type="text" 
+                        placeholder="Username" 
+                        autoComplete="username"
+                        name = "username" 
+                        value={this.state.username}
+                        onChange={this.handleChange} />
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>@</InputGroupText>
                       </InputGroupAddon>
-                      <Input type="text" placeholder="Email" autoComplete="email" />
+                      <Input 
+                        type="text" 
+                        placeholder="Email" 
+                        autoComplete="email"
+                        name = "email" 
+                        value={this.state.email}
+                        onChange={this.handleChange} />
                     </InputGroup>
                     <InputGroup className="mb-3">
                       <InputGroupAddon addonType="prepend">
@@ -33,7 +77,13 @@ class Register extends Component {
                           <i className="icon-lock"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Password" autoComplete="new-password" />
+                      <Input 
+                        type="password" 
+                        placeholder="Password" 
+                        autoComplete="new-password"
+                        name = "password" 
+                        value={this.state.password}
+                        onChange={this.handleChange} />
                     </InputGroup>
                     <InputGroup className="mb-4">
                       <InputGroupAddon addonType="prepend">
@@ -41,9 +91,19 @@ class Register extends Component {
                           <i className="icon-lock"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input type="password" placeholder="Repeat password" autoComplete="new-password" />
+                      <Input 
+                      type="password" 
+                      placeholder="Repeat password" 
+                      autoComplete="new-password"
+                      name = "confirmpassword"
+                      value={this.state.confirmpassword}
+                      onChange={this.handleChange} />
+                      {this.state.password===this.state.confirmpassword?null:<Badge color="danger">Not Match</Badge>}
                     </InputGroup>
-                    <Button color="success" block>Create Account</Button>
+                    <Button 
+                    color="success" block  
+                    disabled={disabledCondition}
+                    >Create Account</Button>
                   </Form>
                 </CardBody>
                 <CardFooter className="p-4">
