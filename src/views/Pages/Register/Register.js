@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Badge, Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Register extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.onFormSubmit = this.onFormSubmit.bind(this);
     this.handleChange  = this.handleChange .bind(this);
@@ -14,8 +14,10 @@ class Register extends Component {
     };
   }
 
-  onFormSubmit() {
-    alert(JSON.stringify(this.state, null, '  '));
+  onFormSubmit(e) {
+    e.preventDefault();
+    localStorage.setItem('user', JSON.stringify(this.state));
+    this.props.history.push('./login')
   }
   handleChange(e) {
 
