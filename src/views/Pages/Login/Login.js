@@ -3,7 +3,35 @@ import { Link } from 'react-router-dom';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Login extends Component {
+
+  constructor(props) {
+    super();
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.handleChange  = this.handleChange .bind(this);
+    this.state = {
+      username: '',
+      password: '',
+    };
+  }
+
+  handleChange(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    this.setState({
+      [name]:value
+    })
+  }
+
+  onFormSubmit(e) {
+    e.preventDefault();
+    const user = JSON.parse(localStorage.getItem('user'));
+    if(user.username === this.state.username && user.password === this.state.password)
+    this.props.toggleLogin()
+  }
+
   render() {
+    console.log(this.props)
     return (
       <div className="app flex-row align-items-center">
         <Container>
@@ -12,7 +40,7 @@ class Login extends Component {
               <CardGroup>
                 <Card className="p-4">
                   <CardBody>
-                    <Form>
+                    <Form onSubmit={this.onFormSubmit}>
                       <h1>Login</h1>
                       <p className="text-muted">Sign In to your account</p>
                       <InputGroup className="mb-3">
@@ -21,7 +49,7 @@ class Login extends Component {
                             <i className="icon-user"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="text" placeholder="Username" autoComplete="username" />
+                        <Input type="text" name = "username" value={this.state.username} onChange={this.handleChange} placeholder="Username" autoComplete="username" />
                       </InputGroup>
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
@@ -29,14 +57,14 @@ class Login extends Component {
                             <i className="icon-lock"></i>
                           </InputGroupText>
                         </InputGroupAddon>
-                        <Input type="password" placeholder="Password" autoComplete="current-password" />
+                        <Input type="password" name = "password" value={this.state.password} onChange={this.handleChange} placeholder="Password" autoComplete="current-password" />
                       </InputGroup>
                       <Row>
                         <Col xs="6">
                           <Button color="primary" className="px-4">Login</Button>
                         </Col>
                         <Col xs="6" className="text-right">
-                          <Button color="link" className="px-0">Forgot password?</Button>
+                          
                         </Col>
                       </Row>
                     </Form>
