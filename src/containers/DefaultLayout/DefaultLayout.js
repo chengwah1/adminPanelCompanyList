@@ -1,6 +1,7 @@
 import React, { Component, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
+import auth from '../../auth';
 
 import {
   AppAside,
@@ -29,7 +30,7 @@ class DefaultLayout extends Component {
 
   signOut(e) {
     e.preventDefault()
-    this.props.history.push('/login')
+    auth.logout(()=>this.props.history.push('/')) 
   }
 
   render() {
@@ -67,7 +68,7 @@ class DefaultLayout extends Component {
                         )} />
                     ) : (null);
                   })}
-                  <Redirect from="/home" to="/dashboard" />
+                  <Redirect from="/" to="/dashboard" />
                 </Switch>
               </Suspense>
             </Container>

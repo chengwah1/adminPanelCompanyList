@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../../auth';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
 
 class Login extends Component {
@@ -27,7 +28,7 @@ class Login extends Component {
     e.preventDefault();
     const user = JSON.parse(localStorage.getItem('user'));
     if(user.username === this.state.username && user.password === this.state.password)
-    this.props.toggleLogin()
+    auth.login(()=>this.props.history.push('./dashboard'))
   }
 
   render() {
