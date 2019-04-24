@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Badge, Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
+import { Badge, Button, Card, CardBody, CardFooter, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row, FormFeedback } from 'reactstrap';
 
 class Register extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Register extends Component {
   onFormSubmit(e) {
     e.preventDefault();
     localStorage.setItem('user', JSON.stringify(this.state));
-    this.props.history.push('./login')
+    this.props.history.push('./')
   }
   handleChange(e) {
     const name = e.target.name;
@@ -91,15 +91,25 @@ class Register extends Component {
                           <i className="icon-lock"></i>
                         </InputGroupText>
                       </InputGroupAddon>
-                      <Input 
-                      type="password" 
-                      placeholder="Repeat password" 
-                      autoComplete="new-password"
-                      name = "confirmpassword"
-                      value={this.state.confirmpassword}
-                      onChange={this.handleChange} />
-                      {this.state.password===this.state.confirmpassword?null:<Badge color="danger">Not Match</Badge>}
+                      {this.state.password===this.state.confirmpassword?
+                        <Input 
+                        type="password" 
+                        placeholder="Repeat password" 
+                        autoComplete="new-password"
+                        name = "confirmpassword"
+                        value={this.state.confirmpassword}
+                        onChange={this.handleChange} />
+                        :
+                        <Input invalid
+                        type="password" 
+                        placeholder="Repeat password" 
+                        autoComplete="new-password"
+                        name = "confirmpassword"
+                        value={this.state.confirmpassword}
+                        onChange={this.handleChange} />}
+                        <FormFeedback>Oh noes! both password doesnt match</FormFeedback>
                     </InputGroup>
+                    
                     <Button 
                     color="success" block  
                     disabled={disabledCondition}
