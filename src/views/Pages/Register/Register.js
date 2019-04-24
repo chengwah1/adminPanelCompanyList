@@ -107,7 +107,7 @@ class Register extends Component {
                         name = "confirmpassword"
                         value={this.state.confirmpassword}
                         onChange={this.handleChange} />}
-                        <FormFeedback>Oh noes! both password doesnt match</FormFeedback>
+                        <FormFeedback>Oh noes! both passwords doesnt match</FormFeedback>
                     </InputGroup>
                     
                     <Button 
@@ -116,7 +116,7 @@ class Register extends Component {
                     >Create Account</Button>
                   </Form>
                 </CardBody>
-                <CardFooter className="p-4">
+                {/* <CardFooter className="p-4">
                   <Row>
                     <Col xs="12" sm="6">
                       <Button className="btn-facebook mb-1" block><span>facebook</span></Button>
@@ -125,7 +125,7 @@ class Register extends Component {
                       <Button className="btn-twitter mb-1" block><span>twitter</span></Button>
                     </Col>
                   </Row>
-                </CardFooter>
+                </CardFooter> */}
               </Card>
             </Col>
           </Row>
