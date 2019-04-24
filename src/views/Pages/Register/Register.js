@@ -20,14 +20,12 @@ class Register extends Component {
     this.props.history.push('./login')
   }
   handleChange(e) {
-
     const name = e.target.name;
     const value = e.target.value;
 
-      this.setState({
-        [name]:value
-      })
-
+    this.setState({
+      [name]:value
+    })
   }
 
   render() {
