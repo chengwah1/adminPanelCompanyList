@@ -38,87 +38,87 @@ export default {
     },
     {
       name: 'Base',
-      url: '/base',
+      url: '/dashboard/base',
       icon: 'icon-puzzle',
       children: [
         {
           name: 'Breadcrumbs',
-          url: '/base/breadcrumbs',
+          url: '/dashboard/base/breadcrumbs',
           icon: 'icon-puzzle',
         },
         {
           name: 'Cards',
-          url: '/base/cards',
+          url: '/dashboard/base/cards',
           icon: 'icon-puzzle',
         },
         {
           name: 'Carousels',
-          url: '/base/carousels',
+          url: '/dashboard/base/carousels',
           icon: 'icon-puzzle',
         },
         {
           name: 'Collapses',
-          url: '/base/collapses',
+          url: '/dashboard/base/collapses',
           icon: 'icon-puzzle',
         },
         {
           name: 'Dropdowns',
-          url: '/base/dropdowns',
+          url: '/dashboard/base/dropdowns',
           icon: 'icon-puzzle',
         },
         {
           name: 'Forms',
-          url: '/base/forms',
+          url: '/dashboard/base/forms',
           icon: 'icon-puzzle',
         },
         {
           name: 'Jumbotrons',
-          url: '/base/jumbotrons',
+          url: '/dashboard/base/jumbotrons',
           icon: 'icon-puzzle',
         },
         {
           name: 'List groups',
-          url: '/base/list-groups',
+          url: '/dashboard/base/list-groups',
           icon: 'icon-puzzle',
         },
         {
           name: 'Navs',
-          url: '/base/navs',
+          url: '/dashboard/base/navs',
           icon: 'icon-puzzle',
         },
         {
           name: 'Paginations',
-          url: '/base/paginations',
+          url: '/dashboard/base/paginations',
           icon: 'icon-puzzle',
         },
         {
           name: 'Popovers',
-          url: '/base/popovers',
+          url: '/dashboard/base/popovers',
           icon: 'icon-puzzle',
         },
         {
           name: 'Progress Bar',
-          url: '/base/progress-bar',
+          url: '/dashboard/base/progress-bar',
           icon: 'icon-puzzle',
         },
         {
           name: 'Switches',
-          url: '/base/switches',
+          url: '/dashboard/base/switches',
           icon: 'icon-puzzle',
         },
         {
           name: 'Tables',
-          url: '/base/tables',
+          url: '/dashboard/base/tables',
           icon: 'icon-puzzle',
         },
         {
           name: 'Tabs',
-          url: '/base/tabs',
+          url: '/dashboard/base/tabs',
           icon: 'icon-puzzle',
         },
         {
           name: 'Tooltips',
-          url: '/base/tooltips',
+          url: '/dashboard/base/tooltips',
           icon: 'icon-puzzle',
         },
       ],
@@ -153,6 +153,11 @@ export default {
     {
       name: 'Compoany List',
       url: '/dashboard/company',
+      icon: 'icon-pie-chart',
+    },
+    {
+      name: 'Employee',
+      url: '/dashboard/employee',
       icon: 'icon-pie-chart',
     },
     {

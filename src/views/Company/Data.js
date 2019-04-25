@@ -9,25 +9,37 @@ export const data = [{
             employeeEmail: 'orci.luctus@ipsumac.com',
             employeeContact: '1-976-182-8368',
             employeeJoinDate: 'May 17, 2019',
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 60000
         },
         {
             employeeName: "Yasir",
             employeeEmail: "enim@etliberoProin.net",
             employeeContact: "1-420-524-3582",
             employeeJoinDate: "Jun 12, 2018",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 65230
         },
         {
             employeeName: "Chancellor",
             employeeEmail: "augue.scelerisque@quispedeSuspendisse.ca",
             employeeContact: "1-310-262-6213",
             employeeJoinDate: "Jun 9, 2019",
+            employeeGender: "Female",
+            employeeRelationship: "Single",
+            employeeSalary: 35460
 
         },
         {
-            employeeName: "BrendaemployeeName: ",
+            employeeName: "Brenda: ",
             employeeEmail: "vitae.aliquet@consectetuercursuset.com",
             employeeContact: "1-825-444-3955",
             employeeJoinDate: "Aug 19, 2018",
+            employeeGender: "Female",
+            employeeRelationship: "Married",
+            employeeSalary: 42305
         }
     ]
 },
@@ -41,25 +53,37 @@ export const data = [{
             employeeName: "Hasad",
             employeeEmail: "dapibus.ligula@Vivamus.ca",
             employeeContact: "1-796-563-2047",
-            employeeJoinDate: "Mar 28, 2020"
+            employeeJoinDate: "Mar 28, 2020",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 120000
         },
         {
             employeeName: "Chaim",
             employeeEmail: "nec@hendreritaarcu.org",
             employeeContact: "1-197-431-8216",
-            employeeJoinDate: "Jul 22, 2018"
+            employeeJoinDate: "Jul 22, 2018",
+            employeeGender: "Male",
+            employeeRelationship: "Married",
+            employeeSalary: 67000
         },
         {
             employeeName: "Brady",
             employeeEmail: "malesuada.vel@loremfringillaornare.net",
             employeeContact: "1-581-454-2398",
-            employeeJoinDate: "Jan 31, 2020"
+            employeeJoinDate: "Jan 31, 2020",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 98500
         },
         {
-            employeeName: "DuncaemployeeName: ",
+            employeeName: "Dunca",
             employeeEmail: "netus.et@loremipsum.ca",
             employeeContact: "1-219-959-7595",
-            employeeJoinDate: "Mar 30, 2019"
+            employeeJoinDate: "Mar 30, 2019",
+            employeeGender: "Male",
+            employeeRelationship: "Married",
+            employeeSalary: 65400
         }
     ]
 },
@@ -73,19 +97,28 @@ export const data = [{
             employeeName: "Harding",
             employeeEmail: "quis.lectus@mifringillami.ca",
             employeeContact: "1-109-562-0206",
-            employeeJoinDate: "Feb 20, 2020"
+            employeeJoinDate: "Feb 20, 2020",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 78550
         },
         {
-            employeeName: "ChristiaemployeeName: ",
+            employeeName: "Christiana: ",
             employeeEmail: "metus.facilisis.lorem@quislectusNullam.net",
             employeeContact: "1-516-647-7887",
-            employeeJoinDate: "May 28, 2019"
+            employeeJoinDate: "May 28, 2019",
+            employeeGender: "Female",
+            employeeRelationship: "Married",
+            employeeSalary: 80000
         },
         {
             employeeName: "Erasmus",
             employeeEmail: "ac@Integer.org",
             employeeContact: "1-748-130-5436",
-            employeeJoinDate: "Feb 4, 2020"
+            employeeJoinDate: "Feb 4, 2020",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 76520
         }
     ]
 },
@@ -96,22 +129,31 @@ export const data = [{
     industry: 'Specialty Chemicals',
     country: 'USA',
     employee: [{
-            employeeName: "GeorgemployeeEmail: ",
+            employeeName: "George",
             employeeEmail: "ornare.lectus@sed.co.uk",
             employeeContact: "1-620-533-7587",
-            employeeJoinDate: "Jan 27, 2020"
+            employeeJoinDate: "Jan 27, 2020",
+            employeeGender: "Male",
+            employeeRelationship: "Married",
+            employeeSalary: 45600
         },
         {
             employeeName: "Tanek",
             employeeEmail: "nascetur.ridiculus.mus@anteiaculis.ca",
             employeeContact: "1-131-390-3915",
-            employeeJoinDate: "Jul 16, 2018"
+            employeeJoinDate: "Jul 16, 2018",
+            employeeGender: "Male",
+            employeeRelationship: "Married",
+            employeeSalary: 50000
         },
         {
             employeeName: "Micah",
             employeeEmail: "neque.vitae.semper@Crasvehicula.edu",
             employeeContact: "1-466-887-9421",
-            employeeJoinDate: "Dec 17, 2018"
+            employeeJoinDate: "Dec 17, 2018",
+            employeeGender: "Female",
+            employeeRelationship: "Single",
+            employeeSalary: 65420
         }
     ]
 },
@@ -125,13 +167,19 @@ export const data = [{
             employeeName: "Hayes",
             employeeEmail: "Donec@libero.org",
             employeeContact: "1-150-440-1024",
-            employeeJoinDate: "Feb 25, 2020"
+            employeeJoinDate: "Feb 25, 2020",
+            employeeGender: "Female",
+            employeeRelationship: "Single",
+            employeeSalary: 250000
         },
         {
             employeeName: "Bernard",
             employeeEmail: "purus@egettinciduntdui.org",
             employeeContact: "1-356-460-8938",
-            employeeJoinDate: "Aug 18, 2018"
+            employeeJoinDate: "Aug 18, 2018",
+            employeeGender: "Male",
+            employeeRelationship: "Single",
+            employeeSalary: 64700
         }
     ]
 }

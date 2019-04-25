@@ -47,7 +47,7 @@ const columns = [
     }
   ];
   
-  const employeeColumns = [
+const employeeColumns = [
     {
       Header: "Employee",
       columns: [
@@ -69,8 +69,8 @@ const columns = [
           accessor: "employeeContact"
         },
         {
-          Header: "Join Date",
-          accessor: "employeeJoinDate"
+          Header: "Salary",
+          accessor: "employeeSalary"
         }
       ]
     }
@@ -81,8 +81,32 @@ const Tips = () =>
         <em>Tip: Hold shift when sorting to multi-sort!</em>
     </div>;
 
+let companyToBeDisplay = {};
+let employeeToBeDisplay = {};
+const callback = (state, rowInfo, column, instance) => {
+  
+  return {
+    onClick: () => {
+      const EEmail = rowInfo.original.employeeEmail;
+      data.forEach(company => { 
+        company.employee.forEach(employee => {
+
+          if (employee.employeeEmail===EEmail){
+            companyToBeDisplay = company;
+            employeeToBeDisplay = employee
+          }
+        });
+      });
+
+      const RouteHistory = instance.props.RouteHistory
+      RouteHistory.history.push('/dashboard/employee')
+    }
+  };
+};
+
 class CompanyList extends React.Component {
 render() {
+
     return (
     <div>
         <ReactTable
@@ -92,14 +116,16 @@ render() {
         defaultPageSize={10}
         className="-striped -highlight"
         SubComponent={row => {
+          console.log(this.props)
             return (
             <div style={{ padding: "20px" }}>
                 <ReactTable
-                
+                getTdProps={callback}
                 data={row.original.employee}
                 columns={employeeColumns}
-                defaultPageSize={3}
+                defaultPageSize={7}
                 showPagination={false}
+                RouteHistory={this.props}
                 />
             </div>
             );
@@ -114,6 +140,7 @@ render() {
 }
 
 export default CompanyList;
+export {companyToBeDisplay, employeeToBeDisplay};
   
 
   

@@ -23,6 +23,7 @@ const ButtonGroups = React.lazy(() => import('./views/Buttons/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/Buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/Charts'));
 const CompanyList = React.lazy(() => import('./views/Company/Company'));
+const DisplayEmployee = React.lazy(() => import('./views/Display/DisplayEmployee'));
 const Dashboard = React.lazy(() => import('./views/Dashboard'));
 const CoreUIIcons = React.lazy(() => import('./views/Icons/CoreUIIcons'));
 const Flags = React.lazy(() => import('./views/Icons/Flags'));
@@ -79,6 +80,7 @@ const routes = [
   { path: '/dashboard/widgets', name: 'Widgets', component: Widgets },
   { path: '/dashboard/charts',exact: true, name: 'Charts', component: Charts },
   { path: '/dashboard/company', name: 'Company List', component: CompanyList },
+  { path: '/dashboard/employee', name: 'Employee', component: DisplayEmployee },
   { path: '/dashboard/users', exact: true,  name: 'Users', component: Users },
   { path: '/dashboard/users/:id', exact: true, name: 'User Details', component: User },
 ];
